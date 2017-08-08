@@ -38,15 +38,26 @@ public class Generator : MonoBehaviour
                 int columnHeight = noise.GetNoise(x, z, maxY) + 2;
                 for (int y = 0; y < columnHeight; y++)
                 {
-                        GameObject gameObjToInstantiate = dirtPrefab;
-                        if (y == columnHeight - 1)
-                            gameObjToInstantiate = grassPrefab;
-                        GameObject obj = Instantiate(gameObjToInstantiate, new Vector3(x, y, z), Quaternion.identity);
-                        obj.transform.parent = this.gameObject.transform;
-                    
+                    GameObject gameObjToInstantiate = dirtPrefab;
+                    if (y == columnHeight - 1)
+                        gameObjToInstantiate = grassPrefab;
+                    GameObject obj = Instantiate(gameObjToInstantiate, new Vector3(x, y, z), Quaternion.identity);
+                    obj.transform.parent = this.gameObject.transform;
+                    /* int x = 0; int y = 0; int z = 0;
+                                 GenerateCube(x, y, z);
+
+                             }*/
+
                 }
-                
             }
         }
+
+        /*void GenerateCube(int x, int y, int z)
+        {
+            float offset = 0.5f;
+
+            Instantiate(grassPrefab, new Vector3(x, y, z), Quaternion.identity);
+            Instantiate(grassPrefab, new Vector3(x, y, z), Quaternion.identity);
+        }*/
     }
 }
