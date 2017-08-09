@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- *      Generater random world
+ *      Generates random world
  *      - Can be chosen if the world has water or trees
  *      - Size is adjustable
  *      - Water level can be chosen
